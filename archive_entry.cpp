@@ -102,6 +102,11 @@ mode_t entry::get_header_value_perm()
   return archive_entry_perm(_entry.get());
 }
 
+mode_t entry::get_header_value_filetype()
+{
+  return archive_entry_filetype(_entry.get());
+}
+
 dev_t entry::get_header_value_rdev()
 {
   return archive_entry_rdev(_entry.get());
@@ -181,6 +186,10 @@ void entry::set_header_value_mode(mode_t value)
 void entry::set_header_value_perm(mode_t value)
 {
   archive_entry_set_perm(_entry.get(), value);
+}
+
+void entry::set_header_value_filetype(mode_t value) {
+  archive_entry_set_filetype(_entry.get(), value);
 }
 
 void entry::set_header_value_rdev(dev_t value)

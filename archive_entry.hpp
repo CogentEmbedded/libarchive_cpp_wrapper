@@ -56,6 +56,7 @@ public:
   int64_t get_header_value_uid();
   mode_t get_header_value_mode();
   mode_t get_header_value_perm();
+  mode_t get_header_value_filetype();
   dev_t get_header_value_rdev();
   dev_t get_header_value_rdevmajor();
   dev_t get_header_value_rdevminor();
@@ -74,6 +75,7 @@ public:
   void set_header_value_uid(int64_t value);
   void set_header_value_mode(mode_t value);
   void set_header_value_perm(mode_t value);
+  void set_header_value_filetype(mode_t value);
   void set_header_value_rdev(dev_t value);
   void set_header_value_rdevmajor(dev_t value);
   void set_header_value_rdevminor(dev_t value);
